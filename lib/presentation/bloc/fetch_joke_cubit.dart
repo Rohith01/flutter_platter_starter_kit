@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_platter/services/models/joke_model.dart';
 import 'package:flutter_platter/services/repository/fetch_joke_repository.dart';
@@ -13,9 +12,7 @@ class FetchJokeCubit extends Cubit<FetchJokeState> {
   void fetchJoke() async {
     emit(FetchJokeLoading());
     try {
-      debugPrint('fetching joke1');
       final data = await fetchJokeRepository.fetchJoke();
-      debugPrint('fetching joke5 : $data');
 
       emit(FetchJokeLoaded(joke: data));
     } catch (e) {

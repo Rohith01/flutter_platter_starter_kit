@@ -124,10 +124,7 @@ class MyApp extends StatelessWidget {
             BlocProvider(create: (context) => di.sl<ThemeCubit>()),
             BlocProvider(create: (context) => di.sl<FetchJokeCubit>()),
           ],
-          child: BlocConsumer<ThemeCubit, ThemeState>(
-            listener: (context, state) {
-              debugPrint('theme state : $state');
-            },
+          child: BlocBuilder<ThemeCubit, ThemeState>(
             builder: (context, state) {
               return MaterialApp.router(
                 title: 'Flutter Platter',

@@ -39,7 +39,6 @@ class _DashboardViewState extends State<DashboardView> {
       body: Center(
         child: BlocConsumer<AuthBloc, AuthState>(
           listener: (context, state) {
-            debugPrint('Auth state is $state');
             if (state is UserLoggedOutState) {
               context.go('/login');
             } else if (state is AuthVerifiedOldUser ||
@@ -50,12 +49,10 @@ class _DashboardViewState extends State<DashboardView> {
           builder: (context, state) {
             return BlocConsumer<ManageUserProfileCubit, ManageUserProfileState>(
               listener: (context, state) {
-                debugPrint('state is $state');
                 if (state is ManageUserProfileError) {
                   showSnackBar(
                     context: context,
-                    message:
-                        'dashboard:: Something went wrong! Please try again later.',
+                    message: 'Something went wrong! Please try again later.',
                     showAction: false,
                   );
                 }
@@ -258,7 +255,6 @@ class _DashboardViewState extends State<DashboardView> {
                                                   return kPrimaryDark;
                                                 }),
                                             onChanged: (bool value) {
-                                              debugPrint(value.toString());
                                               BlocProvider.of<ThemeCubit>(
                                                 context,
                                               ).toggleTheme();

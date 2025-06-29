@@ -157,7 +157,6 @@ class AuthBloc extends Bloc<PhoneAuthEvent, AuthState> {
 
       user = userCredential.user;
       if (user != null && user.emailVerified) {
-        debugPrint('user details -- $user');
         await prefs.setBool('isUserLoggedIn', true);
         if (user.metadata.creationTime != null &&
             DateTime.now().isAfter(
@@ -195,7 +194,6 @@ class AuthBloc extends Bloc<PhoneAuthEvent, AuthState> {
           );
 
       user = userCredential.user;
-      debugPrint('user details -- $user');
       if (user != null) {
         user.sendEmailVerification();
         final Map<String, String?> userDetails = {

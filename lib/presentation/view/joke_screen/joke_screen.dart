@@ -60,7 +60,6 @@ class _JokeScreenState extends State<JokeScreen> {
                   height: 200,
                   child: Lottie.network(
                     errorBuilder: (context, error, stackTrace) {
-                      debugPrint(error.toString());
                       return const SizedBox(height: 30);
                     },
                     'https://lottie.host/1993f724-beed-4979-8997-2a10189ad6a9/WORl1mGIHm.json',
