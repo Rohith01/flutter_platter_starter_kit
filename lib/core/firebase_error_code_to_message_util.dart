@@ -1,8 +1,8 @@
+///Maps firebase error codes [https://firebase.google.com/docs/auth/admin/errors] to custom readable error messages
 String firebaseErrorCodetoErrorMessage(String code) {
   switch (code) {
     case 'invalid-email':
       return 'Please enter valid email';
-
     case 'user-disabled':
       return 'This account is currently disabled! Please contact admin';
     case 'network-request-failed':

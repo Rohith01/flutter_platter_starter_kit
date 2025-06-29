@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_platter/core/constants.dart';
 
+///Warning Popup shown when user tries to exit from app at Login
 Future<void> showLeaveAppPopup(BuildContext context) async {
   return showDialog<void>(
     context: context,
