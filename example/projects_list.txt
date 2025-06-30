@@ -1,0 +1,5 @@
+These are the list of projects built using Flutter Platter Starter Kit. 
+To add your please createa PR by editing this file or leave an email newproject@flutterplatter.com.
+
+list
+1. Story Genie - https://github.com/Rohith01/flutter_platter_story_genie
