@@ -36,7 +36,7 @@ Just like an Indian thali 🍽️, Flutter Platter serves you a well-balanced mi
 
 ```bash
 # Clone the repository
-git clone https://github.com/Rohith01/flutter_platter.git
+git clone https://github.com/Rohith01/flutter_platter_starter_kit.git
 cd flutter_platter
 
 # initialize firebase
